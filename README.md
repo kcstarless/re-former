@@ -1,9 +1,6 @@
-# README
+# Ruby on Rails:Re-Former
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+This is part of the forms project in the odin project's Ruby on Rails Curriculum. 
 
 * Ruby version
 
