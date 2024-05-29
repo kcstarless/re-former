@@ -1,0 +1,27 @@
+<h1>Edit User</h1>
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+    <ul>
+      <% @user.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<ul style="list-style: none;">
+    <%= form_with model: @user do |f| %>
+        <li><%= f.label :username %></li>
+        <li><%= f.text_field :username %></li>
+        <br>
+        <li><%= f.label :email %></li>
+        <li><%= f.email_field :email, placeholder: 'example@example.com' %></li>
+        <br>
+        <li><%= f.label :password %></li>
+        <li><%= f.password_field :password %></li>
+        <br>
+        <li><%= f.submit "Submit This Form" %></li>
+    <% end %>
+</ul>

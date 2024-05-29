@@ -1,0 +1,3 @@
+        <li><%= f.label :email_confirmation, value: 'Confirm Email' %></li>
+        <li><%= f.email_field :email_confirmation, placeholder: 'confirm email' %></li>
+        <br>
