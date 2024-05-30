@@ -14,6 +14,7 @@ class UsersController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
   def show
     @user = User.find(params[:id])
   end
@@ -35,6 +36,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :email, :password)
+    params.require(:user).permit(:username, :email, :password, :email_confirmation)
   end
 end
